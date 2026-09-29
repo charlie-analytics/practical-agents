@@ -1,0 +1,7 @@
+{
+  "notice":"Fictional editorial profiles. Limits are user policies, not claims about current platform upload limits.",
+  "accounts":[
+    {"id":"research-linkedin","platform":"linkedin","allowed_topics":["research","technology"],"max_caption_chars":1600,"max_clip_seconds":60,"blocked_caption_phrases":["guaranteed returns"],"voice":"Measured, specific, evidence first. Explain uncertainty."},
+    {"id":"travel-instagram","platform":"instagram","allowed_topics":["travel","food","photography"],"max_caption_chars":1000,"max_clip_seconds":30,"blocked_caption_phrases":[],"voice":"Personal and observant; practical details for travelers."}
+  ]
+}

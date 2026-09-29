@@ -1,0 +1,8 @@
+payment_id,invoice_id,currency,amount,status
+P-001,INV-001,USD,100.00,settled
+P-002,INV-002,USD,100.00,settled
+P-003,INV-002,USD,150.00,pending
+P-004,INV-003,USD,90.00,settled
+P-005,INV-004,USD,50.00,settled
+P-005,INV-004,USD,50.00,settled
+P-006,INV-999,USD,10.00,settled

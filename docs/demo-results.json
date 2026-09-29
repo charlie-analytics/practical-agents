@@ -1,0 +1,368 @@
+[
+  {
+    "mode": "deterministic_demo",
+    "agent": "social-editor",
+    "status": "completed",
+    "note": "Synthetic fixtures. No language model was called; this demonstrates the tools, not autonomous performance.",
+    "result": {
+      "first_draft": {
+        "account_id": "research-linkedin",
+        "platform": "linkedin",
+        "status": "revise_or_ask",
+        "issues": [
+          "account_blocked_phrase:guaranteed returns",
+          "missing_required_context:s2"
+        ],
+        "draft": {
+          "account_id": "research-linkedin",
+          "start_second": 0,
+          "end_second": 7,
+          "caption": "Earn 15% every month. Guaranteed returns!",
+          "topic": "research",
+          "evidence_ids": [
+            "s1"
+          ]
+        },
+        "semantic_review": "Model must separately check irony, quotation, context and account fit; human review remains required.",
+        "publish_performed": false,
+        "dedupe_key": "9af0a1535a77865e23056263fd7ea3db2d03cf27c84bea772e756ff63514cffd"
+      },
+      "expanded_context": {
+        "source": {
+          "file": "clip-manifest.json",
+          "sha256": "3cf0b072a6167eb527c4d5cf57d6ef99460dd8fd44a175c81565a46148d7cc81"
+        },
+        "window": [
+          0,
+          22
+        ],
+        "segments": [
+          {
+            "id": "s1",
+            "start": 0,
+            "end": 7,
+            "text": "Fifteen percent every month. Guaranteed. Sounds wonderful, doesn't it?",
+            "requires_context": [
+              "s2"
+            ]
+          },
+          {
+            "id": "s2",
+            "start": 7,
+            "end": 15,
+            "text": "That's the sales pitch. It is exactly the sort of promise that would make me walk away."
+          },
+          {
+            "id": "s3",
+            "start": 15,
+            "end": 22,
+            "text": "Ask where the return comes from, what can go wrong and whether you can withdraw."
+          }
+        ],
+        "frames": [],
+        "note": "Context from supplied transcript. Audio tone and unsampled visuals may still be missing."
+      },
+      "revised_draft": {
+        "account_id": "research-linkedin",
+        "platform": "linkedin",
+        "status": "ready_for_human_review",
+        "issues": [],
+        "draft": {
+          "account_id": "research-linkedin",
+          "start_second": 0,
+          "end_second": 22,
+          "caption": "A promise of 15% every month should prompt questions. In this fictional example, the speaker explains why they would walk away.",
+          "topic": "research",
+          "evidence_ids": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        "semantic_review": "Model must separately check irony, quotation, context and account fit; human review remains required.",
+        "publish_performed": false,
+        "dedupe_key": "50d5b247b8b5bc6b34b6793c6c5b8fd35dedc086555f2b67013863839563e809"
+      },
+      "different_account": {
+        "account_id": "travel-instagram",
+        "platform": "instagram",
+        "status": "revise_or_ask",
+        "issues": [
+          "topic_not_allowed_for_account"
+        ],
+        "draft": {
+          "account_id": "travel-instagram",
+          "start_second": 0,
+          "end_second": 22,
+          "caption": "A promise of 15% every month should prompt questions. In this fictional example, the speaker explains why they would walk away.",
+          "topic": "research",
+          "evidence_ids": [
+            "s1",
+            "s2",
+            "s3"
+          ]
+        },
+        "semantic_review": "Model must separately check irony, quotation, context and account fit; human review remains required.",
+        "publish_performed": false,
+        "dedupe_key": "812dec43e571e0f9d71372c2eea96cc87853b7cd0284336cfdc6791f0e58ee2a"
+      },
+      "note": "Scripted edge-case demonstration, not an LLM run. No video was watched, cut or published."
+    }
+  },
+  {
+    "mode": "deterministic_demo",
+    "agent": "paper-finder",
+    "status": "completed",
+    "note": "Synthetic fixtures. No language model was called; this demonstrates the tools, not autonomous performance.",
+    "result": {
+      "query": "agent evaluation",
+      "papers": [
+        {
+          "title": "Fictional study of agent evaluation",
+          "year": 2026,
+          "doi": null,
+          "source_record": "https://example.org/work/1",
+          "open_url": "https://example.org/paper/1",
+          "license": "cc-by",
+          "version": "publishedVersion",
+          "retracted": false
+        },
+        {
+          "title": "Fictional retracted study",
+          "year": 2025,
+          "doi": null,
+          "source_record": "https://example.org/work/2",
+          "open_url": "https://example.org/paper/2",
+          "license": null,
+          "version": "submittedVersion",
+          "retracted": true
+        }
+      ],
+      "source": "OpenAlex metadata",
+      "note": "OpenAlex reports open availability. Links and licensing may change; metadata does not establish paper quality. Full text is not fetched.",
+      "snapshot_source": {
+        "file": "papers-fixture.json",
+        "sha256": "bd6c1ce4b38036e0c29d71058809abcf0c575bcbd816d3adea5ea14dd98debb4"
+      },
+      "mode": "supplied metadata snapshot, not live search"
+    }
+  },
+  {
+    "mode": "deterministic_demo",
+    "agent": "csv-auditor",
+    "status": "completed",
+    "note": "Synthetic fixtures. No language model was called; this demonstrates the tools, not autonomous performance.",
+    "result": {
+      "source": {
+        "file": "observations.csv",
+        "sha256": "388552da5d9678f39fa6f5ee1792749adcac10054ba402675aac8b0849da4e15"
+      },
+      "rows": 8,
+      "columns": [
+        "id",
+        "date",
+        "venue",
+        "volume"
+      ],
+      "missing": {
+        "id": 0,
+        "date": 0,
+        "venue": 1,
+        "volume": 1
+      },
+      "duplicate_keys": [
+        {
+          "value": "a",
+          "count": 2
+        }
+      ],
+      "numeric": {
+        "column": "volume",
+        "valid": 6,
+        "invalid_rows": [
+          8
+        ],
+        "outlier_rows": [
+          6
+        ],
+        "min": "90",
+        "max": "10000",
+        "median": "102.5",
+        "sum": "10505",
+        "mad": "5.0"
+      },
+      "dates": {
+        "column": "date",
+        "invalid_rows": [],
+        "stale_rows": [
+          7
+        ],
+        "future_rows": [
+          8
+        ],
+        "as_of": "2026-09-29"
+      },
+      "note": "Checks describe data quality, not the truth of the underlying observations."
+    }
+  },
+  {
+    "mode": "deterministic_demo",
+    "agent": "document-reviewer",
+    "status": "completed",
+    "note": "Synthetic fixtures. No language model was called; this demonstrates the tools, not autonomous performance.",
+    "result": {
+      "before_source": {
+        "file": "terms-before.md",
+        "sha256": "54e31102517e23f4d16e14cbe63d1410070016ce20cdea5cc95b2e85b2e1c08d"
+      },
+      "after_source": {
+        "file": "terms-after.md",
+        "sha256": "5b5c71c7850db3a27edb14cd5520e5eeea1afd1d963f1be53821b73ffabaf90d"
+      },
+      "changed_blocks": 3,
+      "changes": [
+        {
+          "type": "replace",
+          "before_lines": [
+            1,
+            1
+          ],
+          "after_lines": [
+            1,
+            1
+          ],
+          "before": [
+            "# Fictional Service Terms — version 1"
+          ],
+          "after": [
+            "# Fictional Service Terms — version 2"
+          ]
+        },
+        {
+          "type": "replace",
+          "before_lines": [
+            3,
+            3
+          ],
+          "after_lines": [
+            3,
+            3
+          ],
+          "before": [
+            "The monthly service fee is USD 20."
+          ],
+          "after": [
+            "The monthly service fee is USD 25."
+          ]
+        },
+        {
+          "type": "replace",
+          "before_lines": [
+            5,
+            6
+          ],
+          "after_lines": [
+            5,
+            7
+          ],
+          "before": [
+            "Records are retained for 30 days after account closure.",
+            "Support responds within 2 business days."
+          ],
+          "after": [
+            "Records are retained for 90 days after account closure.",
+            "Support responds within 5 business days.",
+            "Accounts inactive for 12 months may be archived after notice."
+          ]
+        }
+      ],
+      "truncated": false,
+      "note": "Text changes only; document claims and legal significance are not verified."
+    }
+  },
+  {
+    "mode": "deterministic_demo",
+    "agent": "payment-reconciler",
+    "status": "completed",
+    "note": "Synthetic fixtures. No language model was called; this demonstrates the tools, not autonomous performance.",
+    "result": {
+      "sources": [
+        {
+          "file": "invoices.csv",
+          "sha256": "1fabe49bf8f74ed7f31fabd139ee53fb9574b226c1a5103d13a70c64a930ce4a"
+        },
+        {
+          "file": "payments.csv",
+          "sha256": "95e1b66729510453f01f68ff1214866f85e346c30ebc1face8e388b91ad9f2ee"
+        }
+      ],
+      "as_of": "2026-09-29",
+      "invoices": [
+        {
+          "invoice_id": "INV-001",
+          "currency": "USD",
+          "amount": "100.00",
+          "settled": "100.00",
+          "balance": "0.00",
+          "state": "paid"
+        },
+        {
+          "invoice_id": "INV-002",
+          "currency": "USD",
+          "amount": "250.00",
+          "settled": "100.00",
+          "balance": "150.00",
+          "state": "overdue"
+        },
+        {
+          "invoice_id": "INV-003",
+          "currency": "EUR",
+          "amount": "90.00",
+          "settled": "0",
+          "balance": "90.00",
+          "state": "open"
+        },
+        {
+          "invoice_id": "INV-004",
+          "currency": "USD",
+          "amount": "50.00",
+          "settled": "0",
+          "balance": "50.00",
+          "state": "overdue"
+        }
+      ],
+      "exceptions": [
+        {
+          "row": 4,
+          "payment_id": "P-003",
+          "reason": "not_settled"
+        },
+        {
+          "row": 5,
+          "payment_id": "P-004",
+          "reason": "currency_mismatch"
+        },
+        {
+          "row": 6,
+          "payment_id": "P-005",
+          "reason": "duplicate_payment_id"
+        },
+        {
+          "row": 7,
+          "payment_id": "P-005",
+          "reason": "duplicate_payment_id"
+        },
+        {
+          "row": 8,
+          "payment_id": "P-006",
+          "reason": "unknown_invoice"
+        }
+      ],
+      "outstanding_by_currency": {
+        "USD": "200.00",
+        "EUR": "90.00"
+      },
+      "note": "Reconciles supplied records only. Does not verify bank or blockchain settlement. Duplicate IDs excluded entirely; no FX conversion."
+    }
+  }
+]

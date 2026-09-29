@@ -1,0 +1,14 @@
+{
+  "fixture_notice":"Fictional transcript and editorial metadata, designed to demonstrate a misleading short cut. No real video is bundled.",
+  "duration_seconds":30,
+  "rights":"owned_or_licensed",
+  "privacy_review":"clear",
+  "transcript_status":"reviewed",
+  "frames":[],
+  "segments":[
+    {"id":"s1","start":0,"end":7,"text":"Fifteen percent every month. Guaranteed. Sounds wonderful, doesn't it?","requires_context":["s2"]},
+    {"id":"s2","start":7,"end":15,"text":"That's the sales pitch. It is exactly the sort of promise that would make me walk away."},
+    {"id":"s3","start":15,"end":22,"text":"Ask where the return comes from, what can go wrong and whether you can withdraw."},
+    {"id":"s4","start":22,"end":30,"text":"This is a fictional example of how shortening a quote can reverse what the speaker means."}
+  ]
+}

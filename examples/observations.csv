@@ -1,0 +1,9 @@
+id,date,venue,volume
+a,2026-09-28,Example A,100
+b,2026-09-28,Example A,110
+c,2026-09-28,Example B,90
+d,2026-09-28,Example B,105
+e,2026-09-28,Example A,10000
+a,2026-08-01,Example A,100
+f,2026-10-01,Example B,not-a-number
+g,2026-09-28,,
